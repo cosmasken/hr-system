@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Dashboard | Manager lite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="../assets/images/logo-sm.png">
+    <!-- Bootstrap Css -->
+    <link href="../assets/css/bootstrap.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="../assets/css/icons.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="../assets/css/app.css" id="app-style" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+        <header id="page-topbar" class="shadow-none">
+            <div class="navbar-header p-0">
+                <div class="d-flex align-content-center ">
+                    <!-- LOGO -->
+                    <div class="navbar-brand-box">
+                        <a href="../index.html" class="logo">
+                            <span class="logo-sm">
+                                <img src="../assets/images/logo-sm.png" alt="" height="22">
+                            </span>
+                        </a>
+                    </div>
+                    <!-- Mobile hamburger menu -->
+                    <button type="button" class="btn btn-sm px-1 font-size-14 header-item vertical-menu-btn">
+                        <i class="fa fa-fw fa-bars"></i>
+                    </button>
+                    <!-- App Search-->
+                    <form class="flex-grow-1 app-search d-none d-lg-block p-0">
+                        <div class="flex-grow-1 position-relative">
+                            <input type="text" class="flex-grow-1 form-control" placeholder="Search...">
+                            <span class="uil-search"></span>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="d-flex align-items-center">
+                    <div style="margin-right: 12px;" class="dropdown d-inline-block d-lg-none ms-2 p-0">
+                        <button type="button" class="btn header-item noti-icon  p-0" id="page-header-search-dropdown"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="uil-search"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                            aria-labelledby="page-header-search-dropdown">
+                            <form class="p-3">
+                                <div class="m-0">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search ..."
+                                            aria-label="Recipient's username">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="submit"><i
+                                                    class="mdi mdi-magnify"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Organization select-dropdown -->
+                    <div class="dropdown d-none d-md-inline">
+                        <button type="button" class="btn organization-select header-item "
+                            id="page-header-organization-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            Select Organization
+                            <i class="uil-angle-down d-none d-xl-inline-block font-size-15"></i>
+                        </button>
+                        <div class="organization-dropdown dropdown-menu dropdown-menu-end">
+                            <!-- items-->
+                            <a class="dropdown-item" href="#"> <span class="align-middle">Option</span></a>
+                            <a class="dropdown-item" href="#"> <span class="align-middle">Another option</span></a>
+                            <a class="dropdown-item" href="#"> <span class="align-middle">Something else</span></a>
+                        </div>
+                    </div>
+
+                    <!-- End of Organization select-dropdown -->
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item cart-icon  py-1 px-2 badge-pill py-6 mr-10"
+                            id="page-header-cart">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+
+                        <button type="button" class="btn header-item noti-icon  py-1 px-2 badge-pill py-6 "
+                            id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 20 20"
+                                fill="currentColor">
+                                <path
+                                    d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
+                            </svg>
+                            <!-- Notification Indicator -->
+                            <span
+                                class="position-absolute badge border border-light rounded-circle bg-danger notification-indicator"><span
+                                    class="visually-hidden">Unread notifications</span></span> </button>
+
+                        <!-- Notification dropdown -->
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                            aria-labelledby="page-header-notifications-dropdown">
+                            <div class="p-3">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h5 class="m-0 font-size-16"> Notifications </h5>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="#!" class="small"> Mark all as read</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-simplebar style="max-height: 230px;">
+                                <a href="" class="text-reset notification-item">
+                                    <div class="d-flex align-items-start">
+                                        <div class="flex-shrink-0 me-3">
+                                            <div class="avatar-xs">
+                                                <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                                    <i class="uil-shopping-basket"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">Your order is placed</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1">If several languages coalesce the grammar</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 3 min ago</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="" class="text-reset notification-item">
+                                    <div class="d-flex align-items-start">
+                                        <div class="flex-shrink-0 me-3">
+                                            <img src="../assets/images/users/avatar.png" class="" alt="user-pic">
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">James Lemire</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1">It will seem like simplified English.</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 1 hours ago</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="" class="text-reset notification-item">
+                                    <div class="d-flex align-items-start">
+                                        <div class="flex-shrink-0 me-3">
+                                            <div class="avatar-xs">
+                                                <span class="avatar-title bg-success rounded-circle font-size-16">
+                                                    <i class="uil-truck"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">Your item is shipped</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1">If several languages coalesce the grammar</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 3 min ago</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="" class="text-reset notification-item">
+                                    <div class="d-flex align-items-start">
+                                        <div class="flex-shrink-0 me-3">
+                                            <img src="../assets/images/users/avatar.png" class="rounded-circle avatar-xs"
+                                                alt="user-pic">
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">Salena Layfield</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1">As a skeptical Cambridge friend of mine occidental.</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 1 hours ago</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-2 border-top">
+                                <div class="d-grid">
+                                    <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
+                                        <i class="uil-arrow-circle-right me-1"></i> View More..
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End of  Notification dropdown -->
+                    </div>
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item user-avatar pe-3" id="page-header-user-dropdown"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="rounded-circle header-profile-user" src="../assets/images/users/avatar.png"
+                                alt="Header Avatar">
+                            <span class="d-none d-xl-inline-block ms-1 fw-medium font-size-15">Wambui Peris</span>
+                            <i class="uil-angle-down d-none d-xl-inline-block font-size-15"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <!-- item-->
+                            <a class="dropdown-item" href="#"><i
+                                    class="uil uil-user-circle font-size-18 align-middle text-muted me-1"></i> <span
+                                    class="align-middle">View Profile</span></a>
+                            <a class="dropdown-item" href="#"><i
+                                    class="uil uil-wallet font-size-18 align-middle me-1 text-muted"></i> <span
+                                    class="align-middle">My Wallet</span></a>
+                            <a class="dropdown-item" href="#"><i
+                                    class="uil uil-sign-out-alt font-size-18 align-middle me-1 text-muted"></i> <span
+                                    class="align-middle">Sign out</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile organization-select -->
+            <div class="navbar-header dropdown d-md-none d-sm-inline p-0">
+                <button type="button" class="btn d-flex mobile-select organization-select header-item "
+                    id="page-mobile-header-organization-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    Select Organization
+                    <i class="uil-angle-down font-size-15"></i>
+                </button>
+                <div class="organization-dropdown dropdown-menu dropdown-menu-end">
+                    <!-- item-->
+                    <a class="dropdown-item" href="#"> <span class="align-middle">Option</span></a>
+                    <a class="dropdown-item" href="#"> <span class="align-middle">Another option</span></a>
+                    <a class="dropdown-item" href="#"> <span class="align-middle">Something else</span></a>
+                </div>
+            </div>
+        </header>
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="vertical-menu shadow-none">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+                <a href="../index.html" class="logo">
+                    <span class="logo-lg">
+                        <img src="../assets/images/logo-lg.png" alt="" height="40">
+                    </span>
+                </a>
+            </div>
+
+            <div data-simplebar class="sidebar-menu-scroll">
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu list-unstyled" id="side-menu">
+                        <li>
+                            <a href="../index.html" class="link d-flex align-items-center ">
+                                <svg width="23" height="16" viewbox="0 0 26 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.41667 13H3.25L13 3.25L22.75 13H20.5833" stroke="currentColor"
+                                        stroke-width="2.36364" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M5.41699 13V20.5833C5.41699 21.158 5.64527 21.7091 6.05159 22.1154C6.45792 22.5217 7.00902 22.75 7.58366 22.75H18.417C18.9916 22.75 19.5427 22.5217 19.9491 22.1154C20.3554 21.7091 20.5837 21.158 20.5837 20.5833V13"
+                                        stroke="currentColor" stroke-width="2.36364" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M9.75 22.7497V16.2497C9.75 15.675 9.97827 15.1239 10.3846 14.7176C10.7909 14.3113 11.342 14.083 11.9167 14.083H14.0833C14.658 14.083 15.2091 14.3113 15.6154 14.7176C16.0217 15.1239 16.25 15.675 16.25 16.2497V22.7497"
+                                        stroke="currentColor" stroke-width="2.36364" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="link d-flex align-items-center ">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewbox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                                </svg>
+                                <span>Organogram</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="../Organogram/Organizations.html">Organizations</a></li>
+                                <li><a href="../Organogram/Departments.html">Departments</a></li>
+                                <li><a href="../Organogram/Designations.html">Designations</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="link">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                                </svg>
+                                <span>Employees</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="../Employees/AllEmployees.html">All Employees</a></li>
+                                <li><a href="../Employees/Consultants.html">Consultants</a></li>
+                                <li><a href="../Employees/AddEmployee.html">Add Employee</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="link">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewbox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                                </svg>
+                                <span>Payroll & Salaries</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="../Payments/AllSalary.html">All Salary</a></li>
+                                <li><a href="../Payments/Deductions.html">Deductions</a></li>
+                                <li><a href="../Payments/Payslips.html">Payslips</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="link">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewbox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                                </svg>
+                                <span>Leaves</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="../Leaves/AllLeaves.html">All Leaves</a></li>
+                                <li><a href="../Leaves/LeaveApplication.html">Leave Application</a></li>
+                                <li><a href="../Leaves/LeaveSetting.html">Leave Setting</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="link">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewbox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                                </svg>
+                                <span>Assets</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="../Assets/AssignedAssets.html">Assigned Assets</a></li>
+                                <li><a href="../Assets/AssignAssets.html">Assign Assets</a></li>
+                            </ul>
+                        </li>
+                        <hr class="hr">
+                        <li>
+                            <a href="#" class="link d-flex align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewbox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                </svg> <span class="d-flex align-items-center justify-content-between w-100">
+                                    <span>Messages</span>
+                                    <svg class="m-0" width="16" height="16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="8" cy="8" r="8" fill="#FB7B7B" />
+                                    </svg>
+                                </span>
+
+                            </a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="#" class="link">
+                                <svg class="m-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewbox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                                </svg>
+                                <span>Support</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="uil-cog"></i>
+                                <span>Company Policies</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="uil-cog"></i>
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+        </div>
+        <!-- Left Sidebar End -->
+
+        <!-- Start main Content here -->
+        <div class="main-content mt-5 mt-lg-0">
+
+            <div class="page-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-flex align-items-center justify-content-between">
+                                <h4 class="mb-0">Add Employees</h4>
+
+                                <div class="align-self-start">
+                                    <p class="w-lg btn text-white waves-effect waves-light rounded-3 fw-bold"
+                                        style="background-color: #50B5FF;">
+                                        <svg class="me-2" width="24" height="24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10ZM12 8v8M8 12h8"
+                                                stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        Import Employee
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <section class="basic-info">
+
+                        <div class="row" style="padding-bottom: 30px;">
+
+                            <div class="col-lg-8">
+
+                                <div class="card shadow-none h-100" style="border: none; border-radius: 10px;">
+                                    <div class="card-body">
+
+                                        <div class="pb-3" style="border-bottom: 1px solid #E4EBEF;">
+                                            <h5 class="m-0"> Basic Info </h5>
+                                        </div>
+                                        <div>
+
+                                            <div class="pt-3 row">
+
+                                                <div class="col-lg col-12">
+
+                                                    <div class="mb-3">
+
+                                                        <label for="first_name" class="form-label"> First Name</label>
+                                                        <input type="text" class="form-control" aria-label="First Name"
+                                                            style="background-color: #f8fafb;"
+                                                            placeholder=" Enter name" />
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="col-lg col-12">
+
+                                                    <div class="mb-3">
+
+                                                        <label for="last_name" class="form-label"> Last Name</label>
+                                                        <input type="text" class="form-control"
+                                                            style="background-color: #f8fafb;" aria-label="Last Name"
+                                                            placeholder="Enter name">
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-lg col-12">
+                                                    <div class="mb-3">
+                                                        <label for="phone" class="form-label"> Phone </label>
+                                                        <input type="tel" class="form-control"
+                                                            style="background-color: #f8fafb; " aria-label="Phone"
+                                                            placeholder="Enter Number">
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="col-lg col-12">
+                                                    <div class="mb-3">
+                                                        <label for="email" class="form-label"> Email</label>
+                                                        <input type="email" class="form-control"
+                                                            style="background-color: #f8fafb;" aria-label="Email"
+                                                            placeholder="Enter Email">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-lg col-12">
+                                                    <div class="mb-3">
+                                                        <label for="joining_date" class="form-label"> Joining
+                                                            Date</label>
+                                                        <input type="date" class="form-control  text-muted"
+                                                            style="background-color: #f8fafb;"
+                                                            aria-label="Joining Date">
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="col-lg col-12">
+                                                    <div class="mb-3">
+                                                        <label for="gender" class="form-label"> Gender</label>
+                                                        <select class="form-select text-muted"
+                                                            style="background-color: #f8fafb;" id="selectGender">
+                                                            <option selected="1">Male</option>
+                                                            <option value="2">Female</option>
+                                                            <option value="3">Others</option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="pb-2 d-flex align-items-center" style="user-select: none;">
+                                                <input type="checkbox" name="person" id="person">
+                                                <label for="person" class="ps-2 form-check-label"> Person with
+                                                    Disability</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div class="card shadow-none h-100"
+                                    style="margin-bottom: 10px; border: none; border-radius: 10px;">
+                                    <div class="card-body ">
+                                        <div class="pb-3" style="border-bottom: 1px solid #E4EBEF;">
+                                            <h5 class="m-0"> Profile Photo </h5>
+                                        </div>
+                                        <div class="mt-3 position:relative card-body text-center"
+                                            style="background-color: #f8fafb; border:0.5px dashed #50B5FF; border-radius: 10px;">
+
+                                            <div class="position-absolute top-50 start-50 translate-middle text-muted"
+                                                id="upload">
+                                                <svg width="24" height="24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"
+                                                        stroke="#92929D" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M8.5 10a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM21 15l-5-5L5 21"
+                                                        stroke="#92929D" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                                <p class="m-0 mt-1">Upload a file</p>
+                                            </div>
+
+                                            <div class="image_wrapper "
+                                                style="height: 200px; max-width: 100%; border: #02c5fb; display: flex; justify-content: center; ">
+                                                <img class="sr-only" id="output"
+                                                    style="max-height:100%; width:100%; object-fit: cover; object-position: center; padding: 5px; border: 0; outline: none;" />
+                                                <p><input type="file" accept="image/*" name="image" id="file"
+                                                        style="display: none; "></p>
+
+                                            </div>
+                                            <div role="button" id="upload-button"
+                                                style="border-radius: 5px; color: #ffffff; background:#4fb5ff; width: 100%;">
+                                                <input type="file" id="files"
+                                                    class="hidden d-flex text-center justify-content-center btn fw-bold" />
+                                                <label for="files" class="my-2" role="button">Choose a file</label>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+                    <div>
+                        <div class="card h-100 shadow-none" style="margin-bottom: 20px; border: none; border-radius: 10px;">
+                            <div class="card-body">
+                                <div class="pb-3" style="border-bottom: 1px solid #E4EBEF;">
+                                    <h5 class="m-0"> Company Relations </h5>
+                                </div>
+                                <div class="pt-3 row">
+                                    <div class="col-lg col-12">
+                                        <div class="mb-3">
+                                            <label for="organization" class="form-label"> Organization</label>
+                                            <select class="form-select text-muted" style="background-color: #f8fafb;"
+                                                id="selectOrganization">
+                                                <option selected>Select</option>
+                                                <option value="1">Value8</option>
+                                                <option value="2">Value Chain Factory</option>
+                                                <option value="3">Cultivate</option>
+                                                <option value="4">Retail Pay</option>
+                                                <option value="5">Pesaflow</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg col-12">
+                                        <div class="mb-3">
+                                            <label for="department" class="form-label"> Department</label>
+                                            <select class="form-select text-muted" style="background-color: #f8fafb;"
+                                                id="selectDepartment">
+                                                <option selected>Select</option>
+                                                <option value="1">Software Development</option>
+                                                <option value="2">HR Department</option>
+                                                <option value="3">Technical Support </option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg col-12">
+                                        <div class="mb-3">
+                                            <label for="designation" class="form-label"> Designation</label>
+                                            <select class="form-select text-muted" style="background-color: #f8fafb;"
+                                                id="selectDesignation">
+                                                <option selected>Select</option>
+                                                <option value="1">HR Manager</option>
+                                                <option value="2">Assistant HR Manager</option>
+                                                <option value="3">Full Stack Developer</option>
+                                                <option value="4">FrontEnd Developer</option>
+                                                <option value="5">BackEnd Developer</option>
+                                                <option value="6">Graphic Designer</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg col-12">
+                                        <div class="mb-3">
+                                            <label for="employeeType" class="form-label"> Employee Type</label>
+                                            <select class="form-select text-muted" style="background-color: #f8fafb;"
+                                                id="selectEmployeeType">
+                                                <option selected>Select</option>
+                                                <option value="1">Consultant</option>
+                                                <option value="2">Fixed-time</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg col-12">
+                                        <div class="mb-3">
+                                            <label for="jobGroup" class="form-label"> Job Group</label>
+                                            <select class="form-select text-muted" style="background-color: #f8fafb;"
+                                                id="selectJobGroup">
+                                                <option selected>Select</option>
+                                                <option value="1">A1</option>
+                                                <option value="2">A2</option>
+                                                <option value="3">B1</option>
+                                                <option value="3">B2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg col-12">
+                                        <div class="mb-3">
+                                            <label for="ReportsTo:" class="form-label"> Reports To:</label>
+                                            <select class="form-select text-muted" style="background-color: #f8fafb;"
+                                                id="selectReportsTo:">
+                                                <option selected>Select</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg col-12">
+                                        <div class="mb-3">
+                                            <label for="gross_salary" class="form-label"> Gross Salary</label>
+                                            <input type="text" class="form-control" style="background-color: #f8fafb;"
+                                                aria-label="grossSalary">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg col-12">
+                                        <div class="mb-3">
+                                            <label for="Role" class="form-label"> Role</label>
+                                            <select class="form-select" style="background-color: #f8fafb;"
+                                                id="selectRole">
+                                                <option selected></option>
+                                                <option value="1">Administrator</option>
+                                                <option value="2">Hr Manager</option>
+                                                <option value="3">Employee</option>
+                                                <option value="">Finance Manager</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg col-12">
+                                        <div class="mb-3">
+                                            <label for="Permissions" class="form-label"> Permissions</label>
+                                            <input type="text" class="form-control" aria-label="Permissions">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="d-grid" style="padding: 10px;">
+                        <button type="submit" class="col-2 col-lg-1 btn text-white" style="background-color: #50B5FF;">
+                            Save </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+
+    <!-- JAVASCRIPT -->
+    <script src="../assets/libs/jquery/jquery.min.js"></script>
+    <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="../assets/libs/simplebar/simplebar.min.js"></script>
+    <!-- <script src="../assets/libs/node-waves/waves.min.js"></script> -->
+    <script src="../assets/libs/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="../assets/libs/jquery.counterup/jquery.counterup.min.js"></script>
+
+    <!-- apexcharts -->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <script src="../assets/js/pages/dashboard.init.js"></script>
+
+    <!-- App js -->
+    <script src="../assets/js/app.js"></script>
+
+</body>
+
+</html>
